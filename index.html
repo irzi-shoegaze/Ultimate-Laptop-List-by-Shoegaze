@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rekomendasi Laptop</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#15192b;--mut:#5d647c;--bg:#f3f5fb;--card:#fff;--line:#e2e6f1;--acc:#2b4fd8;--pro:#13805a;--con:#b3372f;--r1:#0b8f5b;--r2:#1b8a8f;--r3:#2b5fd8;--r4:#a8680a;--r5:#b3372f}
+@media(prefers-color-scheme:dark){:root{--ink:#e9ecf8;--mut:#9aa2bd;--bg:#0f1220;--card:#181c30;--line:#2a2f4a;--acc:#7f98ff;--pro:#4cd09b;--con:#ff8a80;--r1:#4cd09b;--r2:#5cd0d6;--r3:#8aa6ff;--r4:#f0b95a;--r5:#ff8a80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 "Plus Jakarta Sans",system-ui,sans-serif}
+header,main,footer,section.w{max-width:1180px;margin:0 auto;padding:0 20px}
+header{padding-top:40px;padding-bottom:16px}
+h1{margin:0;font-size:clamp(28px,5vw,44px);line-height:1.1;font-weight:800;letter-spacing:-.02em}
+header p{margin:8px 0 0;color:var(--mut)}
+.lg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:8px 0 6px}
+.lg div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--mut)}
+.lg b{display:block;color:var(--ink);font-size:14px}
+.rk{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--rc);color:var(--card);font-weight:800;font-size:13px;margin-right:6px}
+.lgn{font-size:13px;color:var(--mut);margin:6px 0 0}
+.r1{--rc:var(--r1)}.r2{--rc:var(--r2)}.r3{--rc:var(--r3)}.r4{--rc:var(--r4)}.r5{--rc:var(--r5)}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);border-top:1px solid var(--line);padding:12px 0;margin-top:14px}
+.bar .in{max-width:1180px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+button,select,input[type=search]{font:inherit;color:inherit}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--card);padding:7px 14px;border-radius:99px;cursor:pointer;font-weight:500}
+.tabs button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+select,input[type=search]{border:1px solid var(--line);background:var(--card);padding:7px 12px;border-radius:10px}
+input[type=search]{flex:1;min-width:140px;max-width:240px}
+label.chk{display:flex;gap:6px;align-items:center;cursor:pointer;font-weight:500}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+#n{color:var(--mut);margin:18px 0 10px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;padding-bottom:40px}
+.c{position:relative;scroll-margin-top:90px;background:var(--card);border:1px solid var(--line);border-top:5px solid var(--tc);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.ph{position:relative;height:176px;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}
+.ph img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;padding:10px}
+.cb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px;flex:1}
+.top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.pr{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1;color:var(--tc);white-space:nowrap}
+.pr small{font-size:14px;font-weight:700}
+h2{margin:0;font-size:17px;line-height:1.3;font-weight:700}
+.v{align-self:flex-start;font-size:13px;font-weight:700;padding:3px 12px 3px 4px;border-radius:99px;color:var(--rc);background:color-mix(in srgb,var(--rc) 15%,var(--card));display:flex;align-items:center}
+.sp{display:flex;flex-wrap:wrap;gap:6px}
+.sp span{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:2px 9px;font-size:13px}
+.sp .gpu{font-weight:700;border-color:var(--tc)}
+.rt{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;color:var(--mut)}
+.rt b{display:block;color:#d98a00;font-size:16px;letter-spacing:1px}
+.bh{display:flex;gap:8px;align-items:baseline;font-size:13px;color:var(--mut)}
+.bh b{color:var(--ink);font-size:14px}.bh i{font-style:normal;font-weight:700;margin-left:auto;color:var(--bc)}
+.tr{height:8px;border-radius:99px;background:var(--line);margin-top:5px;display:flex;overflow:hidden}
+.tr .lo{background:var(--bc)}.tr .hi{background:color-mix(in srgb,var(--bc) 40%,var(--line))}
+.b1{--bc:#13a064}.b2{--bc:#2b8fd8}.b3{--bc:#d98a00}.b4{--bc:#d9473c}
+details{border-top:1px solid var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:700;color:var(--acc)}
+ul.p,ul.k{margin:8px 0;padding:0;list-style:none;font-size:14px}
+li{padding-left:18px;position:relative;margin:4px 0}
+.p li::before{content:"+";color:var(--pro)}.k li::before{content:"\2212";color:var(--con)}
+li::before{position:absolute;left:2px;font-weight:800}
+.ln{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.ln a{padding:6px 12px;border-radius:9px;font-size:13px;font-weight:700;text-decoration:none;border:1px solid var(--line);color:var(--ink)}
+.ln a.s{background:var(--acc);border-color:var(--acc);color:var(--bg)}
+section.w{padding-bottom:36px}
+section.w h2.sec{font-size:24px;font-weight:800;margin:0 0 14px;letter-spacing:-.01em}
+.nt{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;max-width:780px}
+.nt p{margin:0 0 14px}.nt p:last-child{margin:0}
+.nt .x{font-weight:800;text-transform:none}
+ol.st{max-width:780px;margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+ol.st>li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px 16px 58px}
+ol.st>li::before{content:counter(s);left:18px;top:15px;width:28px;height:28px;border-radius:50%;background:var(--acc);color:var(--card);display:grid;place-items:center;font-size:14px}
+ol.st h3{margin:0 0 6px;font-size:16px}
+ol.st ul{margin:0;padding:0;list-style:none}
+ol.st ul li{padding-left:14px}ol.st ul li::before{content:"•";font-weight:400;color:var(--mut)}
+code{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:2px 7px;font-size:13px;word-break:break-all}
+.cp{margin-left:6px;font-size:12px;border:1px solid var(--line);background:var(--card);border-radius:7px;padding:2px 9px;cursor:pointer}
+.hb{position:absolute;top:10px;right:10px;z-index:2;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);font-size:20px;line-height:1;cursor:pointer;color:var(--mut);display:grid;place-items:center;padding:0}
+.hb[aria-pressed=true]{color:#e5484d;border-color:#e5484d}
+i.ui{font-style:normal;margin-left:3px;cursor:help}
+.ln button{padding:6px 12px;border-radius:9px;font-size:13px;font-weight:700;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.ln button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ln a.wa{display:inline-flex;align-items:center;gap:6px;background:#25d366;border-color:#25d366;color:#05301a}
+.hl{outline:3px solid var(--acc)}
+.tray{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--card);border-top:1px solid var(--line);padding:10px 20px;display:none;gap:10px;align-items:center;flex-wrap:wrap}
+body.ht .tray{display:flex}
+.chips{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.chip{border:1px solid var(--line);border-radius:99px;padding:3px 6px 3px 12px;font-size:13px;display:flex;gap:6px;align-items:center;background:var(--bg);max-width:240px}
+.chip button{border:0;background:none;color:var(--mut);cursor:pointer;font-size:17px;line-height:1}
+.pbtn,.ghost{border-radius:10px;padding:9px 16px;font-weight:700;cursor:pointer;border:1px solid var(--line);background:var(--card)}
+.pbtn{border:0;background:var(--acc);color:var(--bg)}.pbtn:disabled{opacity:.45;cursor:not-allowed}
+.fab{position:fixed;right:20px;bottom:20px;z-index:15;border:0;border-radius:99px;padding:13px 20px;font-weight:800;background:var(--ink);color:var(--bg);box-shadow:0 8px 24px rgba(0,0,0,.3);cursor:pointer}
+body.ht .fab{bottom:88px}
+dialog{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:0;border-radius:16px;max-width:calc(100% - 24px)}
+dialog::backdrop{background:rgba(8,10,20,.65)}
+.mh{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;background:var(--card);border-bottom:1px solid var(--line)}
+.mh h2{margin:0;font-size:18px}
+.cl{border:1px solid var(--line);background:var(--card);color:var(--ink);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:15px}
+#dc{width:min(1040px,100%);max-height:calc(100% - 24px)}
+#dd{margin:0 0 0 auto;height:100%;max-height:100%;width:min(580px,100%);border-radius:16px 0 0 16px}
+.cw{overflow-x:auto}
+table.ct{border-collapse:collapse;width:100%;min-width:620px;font-size:14px}
+.ct th,.ct td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+.ct th[scope=col]{min-width:200px;font-size:15px}
+.ct tbody th{position:sticky;left:0;background:var(--card);color:var(--mut);font-weight:500;width:110px}
+.ph.sm{height:110px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:99px;font-size:13px;z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.on{opacity:1}
+.nt h3{margin:18px 0 6px;font-size:15px}.nt h3:first-child{margin-top:0}.nt ul{margin:0 0 4px;padding:0;list-style:none}.nt li::before{content:"•";font-weight:400;color:var(--mut)}.nt .fn{color:var(--mut);margin-top:16px}.dsec{margin-bottom:28px}.dsec h2.sec{font-size:20px;font-weight:800;margin:0 0 14px}
+.ctc{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.ctc p{margin:0 0 8px}.ctc .by{font-size:15px;color:var(--ink)}
+.cb2{display:flex;flex-wrap:wrap;gap:8px}
+.cb2 a{padding:8px 14px;border-radius:10px;font-weight:700;font-size:13px;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--card)}
+.cb2 a.wa{background:#25d366;border-color:#25d366;color:#05301a}
+a{color:var(--acc)}
+footer{padding-bottom:40px;color:var(--mut);font-size:13px}
+@media(max-width:420px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<h1>Rekomendasi Laptop</h1>
+<p>Diperbarui 28/10/2026. Pilih kategori harga, urutkan, lalu buka detail kelebihan dan kekurangannya.</p>
+<h2 style="font-size:15px;margin:22px 0 0">Arti kategori rekomendasi</h2>
+<div class="lg">
+<div class="r1"><b><span class="rk">1</span>Instant Buy</b>Paling direkomendasikan, langsung beli.</div>
+<div class="r2"><b><span class="rk">2</span>My Top Pick</b>Pilihan favorit gw.</div>
+<div class="r3"><b><span class="rk">3</span>Best Price to Performance</b>Paling worth it untuk harganya.</div>
+<div class="r4"><b><span class="rk">4</span>Honorable Mention</b>Bagus, tapi ada opsi yang lebih pas.</div>
+<div class="r5"><b><span class="rk">5</span>Overpriced</b>Kurang direkomendasikan, harganya kemahalan.</div>
+</div>
+<p class="lgn">Angka 1 paling bagus, angka 5 kurang direkomendasikan. Grafik baterai memakai skala 0–20 jam video playback; warna terang menunjukkan kisaran jam. Grafik bobot: hijau di bawah 1,5 kg, kuning 1,5–2 kg, merah di atas 2 kg. Ikon 🔒 berarti RAM/SSD soldered (tidak bisa upgrade), 🛠️ berarti bisa di-upgrade; kalau tidak ada ikon, datanya belum ada.</p>
+</header>
+<div class="bar"><div class="in">
+<div class="tabs" id="tabs"></div>
+<input type="search" id="q" placeholder="Cari nama laptop" aria-label="Cari nama laptop">
+<select id="so" aria-label="Urutkan">
+<option value="p+">Harga: termurah</option><option value="p-">Harga: termahal</option>
+<option value="r">Rekomendasi terbaik</option><option value="b">Baterai terawet</option>
+<option value="k">Rating kuliah/kerja</option><option value="g">Rating gaming</option>
+</select>
+<label class="chk"><input type="checkbox" id="rc"> Kategori 1–2 saja</label>
+</div></div>
+<main>
+<p id="n" aria-live="polite"></p>
+<div class="grid" id="g"></div>
+</main>
+
+<footer>
+<p>Harga dan stok di Shopee bisa berubah sewaktu-waktu. Perkiraan FPS Cyberpunk 2077 di 1080p dengan upscaling.</p>
+<div class="ctc">
+<p class="by">Made by <b>Irzi</b></p>
+<p>Ada pertanyaan, atau ada link yang bermasalah? Hubungi saya:</p>
+<div class="cb2">
+<a class="wa" href="https://wa.me/6285770038502?text=Halo%20Irzi%2C%20saya%20mau%20tanya%20soal%20Rekomendasi%20Laptop%20%2F%20ada%20link%20yang%20bermasalah." target="_blank" rel="noopener">WhatsApp 0857-7003-8502</a>
+<a class="em" href="mailto:irzikhaerunuzulan@gmail.com?subject=Rekomendasi%20Laptop">irzikhaerunuzulan@gmail.com</a>
+</div>
+</div>
+</footer>
+<button class="fab" id="fab" aria-haspopup="dialog">Tips &amp; Panduan</button>
+<div class="tray" id="tray" role="region" aria-label="Perbandingan laptop"><div class="chips" id="chips"></div><button class="ghost" id="cclr">Kosongkan</button><button class="pbtn" id="cgo" disabled>Bandingkan (0)</button></div>
+<dialog id="dc" aria-labelledby="dct"><div class="mh"><h2 id="dct">Perbandingan laptop</h2><button class="cl" data-close aria-label="Tutup">✕</button></div><div class="cw" id="cb"></div></dialog>
+<dialog id="dd" aria-labelledby="ddt"><div class="mh"><h2 id="ddt">Tips Pembelian &amp; Panduan Setup Windows Baru</h2><button class="cl" data-close aria-label="Tutup">✕</button></div><div id="db" style="padding:20px">
+<section class="dsec">
+<h2 class="sec">Notes!</h2>
+<div class="nt">
+<h3>Packing &amp; Pengiriman</h3>
+<ul>
+<li>Kalau beli online, wajib asuransi dan minta packing kayu (biasanya nambah Rp80k–100k).</li>
+<li>Kecuali kirim pakai GoSend/GrabExpress, nggak perlu packing kayu.</li>
+<li>Sekalian beli antigores.</li>
+<li><b>SAAT LAPTOP SUDAH SAMPAI WAJIB VIDEO UNBOXING.</b></li>
+</ul>
+<h3>Brand yang Dihindari</h3>
+<p>Hindari brand lokal atau brand yang bukan spesialis laptop (seperti Axioo, Advan, Tecno, Infinix). Urusan after-sales dan garansinya belum terjamin.</p>
+<h3>Harga Laptop</h3>
+<p>Harga laptop sekarang udah agak mahal, andelin voucher Shopee atau beli pas tanggal kembar aja.</p>
+<p>Kalo ada duit beli laptop <b>SEKARANG</b> juga, kalau duitnya gak ada pinjol aje. RAM dan storage gak bakal turun harganya karena perusahaan AI masih bakar duit, awal tahun depan harga laptop pasti lebih mahal.</p>
+<p class="fn">*gw update kalo inget aja</p>
+</div>
+</section>
+<section class="dsec">
+<h2 class="sec">Panduan Setup Laptop Windows Baru</h2>
+<ol class="st">
+<li><h3>Hapus bloatware &amp; antivirus bawaan</h3><ul>
+<li>Buka Control Panel &gt; Uninstall a program.</li>
+<li>Cari dan Uninstall McAfee serta bloatware pabrik lainnya (Windows Defender bawaan sudah cukup).</li></ul></li>
+<li><h3>Debloat Windows (Chris Titus Tool)</h3><ul>
+<li>Sebelum debloat pastiin Windows dan driver udah di-update ke versi terbaru (cek di Settings).</li>
+<li>Klik kanan menu Start, buka Terminal (Admin) atau PowerShell (Admin).</li>
+<li>Ketik/paste: <code>iwr -useb https://christitus.com/win | iex</code><button class="cp">Salin</button> lalu tekan Enter.</li>
+<li>Di aplikasinya, masuk ke tab Tweaks &gt; pilih preset Desktop &gt; klik Run Tweaks.</li>
+<li>Atau tonton ini aja: <a href="https://youtu.be/LF4WZQCpx1A?si=9i_7HUDQOyr6faof" target="_blank" rel="noopener">video panduan</a>.</li></ul></li>
+<li><h3>Install aplikasi dasar (Ninite)</h3><ul>
+<li>Buka <a href="https://ninite.com" target="_blank" rel="noopener">ninite.com</a>.</li>
+<li>Centang aplikasi yang diperlukan (Discord, VLC, Zoom, Steam, dll).</li>
+<li>Klik Get Your Ninite lalu jalankan installernya (otomatis install semua di background).</li>
+<li><b>AIO Visual C++:</b> Download "Visual C++ Redistributable Runtimes All-in-One". Ekstrak zip, jalankan file <code>install_all.bat</code> pakai Run as Administrator.<br>Link: <a href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" target="_blank" rel="noopener">techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one</a></li>
+<li><b>DirectX AIO:</b> Download DirectX End-User Runtimes (June 2010) dari MajorGeeks.<br>Link: <a href="https://www.majorgeeks.com/files/details/directx_end_user_runtime.html" target="_blank" rel="noopener">majorgeeks.com/files/details/directx_end_user_runtime.html</a></li></ul></li>
+<li><h3>Install software wajib</h3><ul>
+<li>Helium Browser: <a href="https://helium.computer" target="_blank" rel="noopener">helium.computer</a></li>
+<li>AB Download Manager: <a href="https://abdownloadmanager.com" target="_blank" rel="noopener">abdownloadmanager.com</a></li>
+<li>NanaZip: Microsoft Store atau <a href="https://github.com/M2Team/NanaZip" target="_blank" rel="noopener">github.com/M2Team/NanaZip</a></li>
+<li>Artcraft (pdfcraft, photocraft, wordcraft dll): <a href="https://getartcraft.com/apps" target="_blank" rel="noopener">getartcraft.com/apps</a></li></ul></li>
+</ol>
+</section>
+</div></dialog>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const T={A:["14–18 jt","#d98a00"],B:["10–13 jt","#2b6fd8"],C:["5–8 jt","#1f9d6b"]};
+const R=["Instant Buy","My Top Pick","Best Price to Performance","Honorable Mention","Overpriced"];
+// [tier,id gambar,nama,cpu,gpu,ram,ssd,[jam min,max],harga(jt),rating kuliah,rating gaming,kategori 1-5,kelebihan,kekurangan,shopee(shop.item),link review]
+const D=[
+["A","a1","Dell 14 Plus 2in1","Intel Ultra 256V","Intel Arc Graphics","16GB DDR5","1TB SSD",[14,18],14.3,5,3,1,"2-in-1 layar sentuh 360° + stylus|Lunar Lake efisien, NPU 47 TOPS|Cyberpunk 45–60 FPS (low/med + XeSS)|Aluminium kokoh, port lengkap (TB4, HDMI 2.1)","RAM soldered, tidak bisa upgrade|Berat ~1,55–1,6 kg|Layar IPS 60Hz, bukan OLED","1685452569.50962780226 1811457459.56913429232 1830180343.49012755089","https://www.laptopmag.com/laptops/windows-laptops/dell-14-plus-2-in-1-intel-review",1.6,"l",""],
+["A","a2","ASUS Expertbook P3 G1 P3406CCAP","Intel Ultra 7 255H","Intel Arc Graphics","8GB DDR5","512GB SSD",[15,20],14.8,5,3,4,"Core Ultra 7 255H kencang & efisien|MIL-STD-810H, keyboard tahan cipratan|Port super lengkap termasuk LAN RJ45|Bisa upgrade: 2 slot RAM & 2 slot SSD","RAM cuma 8GB, upgrade ±Rp1,5jt|Cyberpunk 35–50 FPS hanya setelah RAM 16GB dual-channel|Layar standar bisnis (45% NTSC), desain membosankan","1530871035.44865059384","https://youtu.be/ho0x96_uM3U https://youtube.com/shorts/REEDHBdA6Tk https://www.youtube.com/watch?v=Uj08il8GMLw",1.43,"u","u"],
+["A","a3","DELL Pro 13 Plus","Ryzen 7 250","AMD Radeon Graphics","16GB DDR5","512GB SSD",[7,9],14.8,3,3,5,"Ultrabook 13,3″ sangat ringan (~1,23–1,35 kg)|Ryzen 7 250 kencang, RAM 16GB|Build kokoh, layar 16:10 anti-glare|Cyberpunk 30–40 FPS (FSR)","RAM soldered|Layar 13,3″ terasa kecil untuk multi-window","217781231.47800625609","https://laptopmedia.com/laptop-specs/dell-pro-13-plus-25/specs/",1.3,"l",""],
+["A","a4","ASUS Vivobook S14 M3407KA OLED","AMD Ryzen AI 7 350","AMD Radeon Graphics","16GB DDR5","1TB SSD",[10,12],14.8,5,3,1,"Layar OLED 14″ 100% DCI-P3, HDR 600|Ryzen AI 7 350, NPU 50 TOPS|Baterai 70Wh, 12+ jam, bodi ~1,40 kg MIL-STD|Cyberpunk 35–50 FPS (FSR)","RAM sebagian soldered|OLED glossy, waspada burn-in|Refresh rate 60Hz","226511544.44517248262","https://youtu.be/eNeSQUEUNF8",1.4,"l",""],
+["A","a5","ASUS Zenbook 14 OLED UM3406KA","Ryzen 7 8840HS","AMD Radeon Graphics","16GB DDR5","512GB SSD",[8,12],15.9,5,3,2,"OLED 14″ premium, HDR 600 nits|Tipis 1,49 cm, ~1,20 kg, aluminium MIL-STD|Baterai jumbo 75Wh, 12+ jam|Audio Harman Kardon, kamera IR; Cyberpunk 35–50 FPS","RAM soldered|OLED glossy, rawan burn-in|Hanya 1 slot SSD M.2","1685452569.44276844952 757795871.24481450408","https://youtu.be/3R35xcRWSco",1.2,"l","u"],
+["A","a6","ASUS Vivobook 14 Flip TP3407SA","Intel Core Ultra 7 256V","Intel Arc Graphics","16GB DDR5","1TB SSD",[14,18],16.1,4,3,5,"2-in-1 layar sentuh 360° + stylus|Lunar Lake hemat daya, NPU 47 TOPS|Arc 140V: Cyberpunk 45–60 FPS|Charger Type-C 65W ringkas","RAM soldered|Layar IPS 60Hz, bukan OLED|Berat ~1,5–1,6 kg","1830180343.26244863912","https://www.youtube.com/watch?v=068bnGkm3Z8",1.55,"l",""],
+["A","a7","Lenovo Ideapad 5 2in1 14","AMD Ryzen AI 7 350","AMD Radeon Graphics","16GB DDR5","1TB SSD",[10,12],16.2,3,4,5,"2-in-1 sentuh 360°, opsi Lenovo Digital Pen 2|Ryzen AI 7 350 + Radeon 860M, Cyberpunk 35–50 FPS|Rapid Charge: 15 menit ≈ 2 jam pemakaian|Speaker stereo Dolby, privacy shutter","RAM soldered|Bodi campuran aluminium & plastik|Layar 300 nits 45% NTSC; USB-C tanpa USB4, HDMI 1.4b","1830180343.47311119836","https://www.youtube.com/watch?v=WyLD2zziruE&t=194s",1.55,"l",""],
+["A","a8","Lenovo Ideapad Slim 3 14 Ultra 7 355","Intel Ultra 7 355","Intel Arc Graphics","16GB DDR5","512GB SSD",[16,20],16.4,5,3,2,"RAM 16GB LPDDR5x dual-channel, siap pakai|Core Ultra 7 + NPU, Cyberpunk 30–45 FPS|Layar 14″ WUXGA 16:10, ~1,37 kg|Charger 65W Rapid Charge Boost","RAM soldered|Bodi plastik|Single-fan, bisa hangat saat game lama","405763687.47815184415","https://youtu.be/e-1LwqALcqQ",1.37,"l",""],
+["A","a9","HP Victus 15 (RTX 4050)","AMD Ryzen 7 7445HS","RTX 4050","16GB DDR5","512GB SSD",[4,5],16.8,3,5,4,"Ryzen 7 7445HS + RTX 4050 6GB (DLSS 3)|Cyberpunk 60–85+ FPS (High/Ultra + DLSS)|Layar 144Hz, dual-fan, RAM bisa upgrade|HDMI 2.1, LAN, numpad","Baterai 3–5 jam, charger besar (butuh colokan bagus)|Layar 45% NTSC, kurang cocok desain/editing|Tebal & berat ~2,29 kg, hanya 1 slot SSD","1830180343.48661123644","https://www.youtube.com/watch?v=y51zax6OIF4",2.29,"u","u"],
+["A","a10","HP Victus 15 AI (RTX 5050)","AMD Ryzen AI 5 340","RTX 5050","16GB DDR5","512GB SSD",[4,5],17.5,3,5,4,"Ryzen AI 5 340 + RTX 5050 8GB GDDR7|Cyberpunk 70–95+ FPS (Ultra + DLSS 4)|Layar 144Hz, dual-fan, DTS:X Ultra|SSD PCIe Gen4, RAM bisa upgrade","Baterai 70Wh ±3–5 jam, charger 200W|Layar 45% NTSC, 250–300 nits|Berat ~2,29 kg, hanya 1 slot SSD","1822875370.58168554283 1606364406.40284891744","https://youtube.com/shorts/NI7SPOjc_qQ",2.29,"u","u"],
+["B","b1","MSI Modern A14 AI+","Ryzen AI 5 330","AMD Radeon Graphics","8GB DDR5","512GB SSD",[7,10],10.6,4,2,4,"Copilot+ PC (NPU 50 TOPS) paling murah|RAM tidak soldered, 2 slot SODIMM|~1,40 kg, port lengkap + LAN|Cyberpunk 30–38 FPS setelah RAM 16GB dual-channel","RAM cuma 8GB single-channel, wajib upgrade|Baterai 46,8Wh|Layar 14″ FHD 45% NTSC, 16:9","186184847.42834934611","https://www.facebook.com/gadgetpilipinas/videos/1590041115983905/",1.4,"u",""],
+["B","b2","HP OmniBook 3 15","Ryzen AI 5 330","AMD Radeon Graphics","16GB DDR5","512GB SSD",[7,10],11,4,3,4,"Ryzen AI 5 330 hemat daya, NPU Copilot+|RAM 16GB dual-channel SODIMM, bisa upgrade|Layar 15,6″ 1920x1200 anti-glare + FreeSync|Numpad, baterai 9+ jam, charger USB-C 65W","Bodi plastik|15,6″ ~1,70 kg, agak besar|Warna layar standar (~62,5% sRGB)","1411036600.53418097311 1830180343.53967999525 1127285855.45259523537","https://www.youtube.com/shorts/PzjWCblDuKc",1.7,"u","u"],
+["B","b3","MSI Modern A14 F2HMG AI","Ryzen 7 250","AMD Radeon Graphics","8GB DDR5","512GB SSD",[7,10],11.4,4,2,4,"Ryzen 7 250 8-core/16-thread kencang|RAM tidak soldered, bisa sampai 64GB|~1,40 kg, tombol Copilot, port lengkap + LAN|Cyberpunk 30–42 FPS jika RAM 16GB","RAM cuma 8GB, perlu biaya upgrade|Baterai 46,8Wh|Layar 45% NTSC","186184847.45562674500","https://www.youtube.com/shorts/wTpWWLesFNw",1.4,"u",""],
+["B","b4","Dell 14 DC14255","AMD Ryzen AI 5 330","AMD Radeon Graphics","16GB DDR5","512GB SSD",[7,10],11.9,5,3,1,"RAM 16GB + SSD 512GB di harga Rp11 jutaan|Layar 14″ WUXGA 16:10 anti-glare|Build kokoh Dell, ExpressCharge|Cyberpunk 30–40 FPS (FSR)","Opsi upgrade RAM terbatas (sebagian soldered)|Desain konservatif","1647771941.43434203495","https://www.youtube.com/watch?v=qALM7AzLPGY",1.54,"u","u"],
+["B","b5","Dell 14 Plus 2in1 Touchscreen","AMD Ryzen AI 5 340","AMD Radeon Graphics","8GB DDR5","512GB SSD",[7,10],12.5,4,3,2,"2-in-1 layar sentuh 360° 14″|Ryzen AI 5 340 hemat daya + NPU|Build kokoh, terkesan premium khas Dell Plus|SSD 512GB NVMe responsif","RAM cuma 8GB, harus upgrade|Cyberpunk hanya 20–30 FPS karena RAM 8GB mencekik iGPU|Layar glossy memantulkan bayangan|Tanpa GPU diskrit, tidak cocok rendering berat","1811457459.52609612026","https://www.xda-developers.com/review-dell-14-plus-2in1-2025/",1.59,"","u"],
+["B","b6","Lenovo Ideapad Slim 3 15","AMD Ryzen 7 8840HS","AMD Radeon Graphics","16GB DDR5","512GB SSD",[5,8],12.5,5,4,1,"Ryzen 8840HS + Radeon 780M, iGPU terkencang di kelasnya|Cyberpunk 35–50 FPS (FSR)|Layar 15,6″ lega + numpad|Privacy shutter, fingerprint, Rapid Charge","RAM sebagian soldered|Bodi plastik, ~1,62–1,70 kg|Layar 45% NTSC, kurang cocok desain","1622863032.44422626169 1830180343.45714690943","https://youtube.com/shorts/W2bTvv-gPjg",1.66,"l",""],
+["B","b7","Acer Swift Lite 14 SFL14","AMD Ryzen 7 260H","AMD Radeon Graphics","16GB DDR5","512GB SSD",[7,10],12.5,4,3,4,"Super ringan ~990 gram, aluminium|Ryzen 7 260H 8-core/16-thread|Layar 14″ WUXGA 100% sRGB|Cyberpunk 30–42 FPS (FSR)","RAM soldered|Baterai 50Wh standar|USB-C tanpa USB4/TB4","1640101372.56759608585 1274014683.43431146946","https://www.youtube.com/shorts/7K6uZyBuk5c",0.99,"l",""],
+["B","b8","ASUS Expertbook P3 PM3406CKA","Ryzen AI 5 330","AMD Radeon Graphics","16GB DDR5","512GB SSD",[7,10],12.6,5,3,2,"MIL-STD-810H, keyboard tahan cipratan, keamanan lengkap|2 slot RAM (hingga 64GB) + 2 slot SSD|Baterai 70Wh, layar 14″ WQXGA 100% sRGB|Port LAN RJ45, HDMI 2.1","Desain formal dan kaku","148017040.20113572674","https://www.youtube.com/shorts/Wi7YlxV3d2M",1.48,"u","u"],
+["B","b9","Dell 16 DC16255","AMD Ryzen 7 250","AMD Radeon Graphics","16GB DDR5","1TB SSD",[7,9],13,5,3,2,"Layar sentuh 16″ WUXGA 16:10 lega|Ryzen 7 250, RAM 16GB, SSD 1TB|Build kokoh, numpad, ExpressCharge|Cyberpunk 30–42 FPS (FSR)","Berat ~1,87–1,98 kg|Layar glossy memantulkan cahaya|Refresh rate 60Hz","1822812692.50865654602 757795871.53715874435 1830180343.56767862050 1127285855.40557460844","https://laptopmedia.com/series/dell-16-dc16255-dc16256/",1.93,"u","u"],
+["B","b10","Acer Aspire 14 AI Touch A14-61MT","AMD Ryzen AI 5 330","AMD Radeon Graphics","16GB DDR5","512GB SSD",[7,10],13,5,3,2,"Layar sentuh 14″ WUXGA 100% sRGB|2x USB4 + Wi-Fi 6E|NPU 50 TOPS, baterai 65Wh|Cyberpunk 30–40 FPS (FSR)","RAM soldered|Bodi plastik, tidak semewah seri Swift","78730497.6613394476","https://www.facebook.com/watch/?v=2469610556830236",1.26,"l",""],
+["B","b11","HP OmniBook 5 16","AMD Ryzen AI 7 350","Radeon 860M","16GB DDR5","512GB SSD",[10,10],13.1,5,4,1,"Ryzen AI 7 350 + Radeon 860M, Cyberpunk 35–50 FPS|Layar 16″ WUXGA anti-glare + FreeSync|Bodi aluminium, baterai 59Wh ±10+ jam|Numpad, tombol Copilot, 2x USB-C","RAM soldered|16″ ~1,80 kg, agak besar|Layar ~62,5% sRGB, kurang untuk editing warna","1127285855.47459843896","https://www.youtube.com/shorts/a60ipLrsofM",1.8,"l","u"],
+["C","c1","Dell Pro 14 Essential PV14255","RYZEN 5 220","AMD Radeon Graphics","8GB DDR5","512GB SSD",[7,10],8.8,4,2,3,"Paling terjangkau di lini bisnis Dell|Ryzen 5 220 efisien untuk kerja harian|Layar 14″ WUXGA 16:10 tajam|Bodi kokoh, ExpressCharge","OS DOS, Windows/Office install sendiri|RAM cuma 8GB, disarankan upgrade|Tanpa backlit & fingerprint","1127429539.48812816602","https://www.youtube.com/watch?v=opznxD0PoHY",1.54,"u","u"]
+];
+let tier="all",rec=false,so="p+",q="",cm=[];
+const $=i=>document.getElementById(i);
+const lsg=()=>{try{return JSON.parse(localStorage.getItem("wl")||"[]")}catch(e){return[]}};
+const lss=v=>{try{localStorage.setItem("wl",JSON.stringify(v))}catch(e){}};
+let wl=lsg().filter(x=>D.some(d=>d[1]==x));
+const st=n=>"★".repeat(n)+"☆".repeat(5-n);
+const li=s=>s.split("|").map(x=>`<li>${x}</li>`).join("");
+const pf=p=>String(p).replace(".",",");
+const fb=e=>{const x=["jpg","png","webp"],i=+(e.dataset.i||0);if(i<2){e.dataset.i=i+1;e.src=`images/${e.dataset.id}.${x[i+1]}`}else(e.closest(".ph")||e).remove()};
+const bq=([a,b])=>{const m=(a+b)/2;return m>=14?[1,"Sangat awet"]:m>=10?[2,"Awet"]:m>=7?[3,"Cukup"]:[4,"Boros"]};
+const wq=w=>w<1.5?[1,"Ringan"]:w<=2?[3,"Sedang"]:[4,"Berat"];
+const jamT=([a,b])=>a==b?`${a}+ jam`:`${a}–${b} jam`;
+const bobT=w=>`~${pf(w)} kg`;
+const meter=(lb,val,tag,c,lo,hi,aria)=>`<div class="b${c}"><div class="bh"><span>${lb}</span><b>${val}</b><i>${tag}</i></div><div class="tr" role="img" aria-label="${aria}"><span class="lo" style="width:${lo}%"></span><span class="hi" style="width:${hi}%"></span></div></div>`;
+const ic=(u,w)=>u=="l"?`<i class="ui" title="${w} soldered / on-board, tidak bisa di-upgrade" aria-label="soldered">🔒</i>`:u=="u"?`<i class="ui" title="${w} bisa di-upgrade" aria-label="bisa di-upgrade">🛠️</i>`:"";
+const WA='<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>';
+const waUrl=d=>"https://wa.me/?text="+encodeURIComponent(`Cek laptop ini: ${d[2]} - Rp${pf(d[8])} jt ${location.href.split("#")[0]}#${d[1]}`);
+const card=d=>{const[t,id,n,c,g,r,s,bt,p,k,gm,rk,pr,co,sh,vd,w,ru,su]=d,tc=T[t][1],[bc,bl]=bq(bt),on=wl.includes(id),pk=cm.includes(id);
+const shop=sh.split(" ").map((x,i)=>`<a class="s" href="https://shopee.co.id/product/${x.replace(".","/")}" target="_blank" rel="noopener">Shopee ${i+1}</a>`).join("");
+const vl=vd.split(" "),vid=vl.map((u,i)=>`<a href="${u}" target="_blank" rel="noopener">Review${vl.length>1?" "+(i+1):""}</a>`).join("");
+const [wc,wt]=w?wq(w):[0,""];
+const bob=w?meter("Bobot",bobT(w),wt,wc,w*40,0,`Bobot ${bobT(w)} dari skala 2,5 kg`):`<div class="bh"><span>Bobot</span><b>Belum ada data</b></div>`;
+return`<article class="c" id="${id}" style="--tc:${tc}"><button class="hb" data-a="wl" data-id="${id}" aria-pressed="${on}" aria-label="Simpan ${n} ke wishlist">${on?"♥":"♡"}</button><div class="ph"><img src="images/${id}.jpg" data-id="${id}" alt="${n}" loading="lazy" onerror="fb(this)"></div><div class="cb">
+<div class="top"><h2>${n}</h2><div class="pr">${pf(p)}<small> jt</small></div></div>
+<span class="v r${rk}"><span class="rk">${rk}</span>${R[rk-1]}</span>
+<div class="sp"><span>${c}</span><span class="gpu">${g}</span><span>${r}${ic(ru,"RAM")}</span><span>${s}${ic(su,"SSD")}</span></div>
+<div class="rt"><div>Kuliah/kerja<b>${st(k)}</b></div><div>Gaming<b>${st(gm)}</b></div></div>
+${meter("Baterai",jamT(bt),bl,bc,bt[0]/.2,(bt[1]-bt[0])/.2,`Baterai ${jamT(bt)} dari skala 20 jam`)}
+${bob}
+<details><summary>Kelebihan &amp; kekurangan</summary><ul class="p">${li(pr)}</ul><ul class="k">${li(co)}</ul></details>
+<div class="ln">${shop}${vid}<a class="wa" href="${waUrl(d)}" target="_blank" rel="noopener" aria-label="Bagikan ${n} lewat WhatsApp">${WA}Share</a><button class="cmp" data-a="cmp" data-id="${id}" aria-pressed="${pk}">${pk?"✓ Dipilih":"⚖ Bandingkan"}</button></div></div></article>`};
+function draw(){
+let a=D.filter(d=>(tier=="all"||(tier=="wl"?wl.includes(d[1]):d[0]==tier))&&(!rec||d[11]<3)&&d[2].toLowerCase().includes(q));
+const f={"p+":(x,y)=>x[8]-y[8],"p-":(x,y)=>y[8]-x[8],r:(x,y)=>x[11]-y[11]||x[8]-y[8],b:(x,y)=>(y[7][0]+y[7][1])-(x[7][0]+x[7][1]),k:(x,y)=>y[9]-x[9]||x[8]-y[8],g:(x,y)=>y[10]-x[10]||x[8]-y[8]}[so];
+a.sort(f);
+$("g").innerHTML=a.map(card).join("");
+$("n").textContent=a.length?a.length+" laptop":tier=="wl"&&!wl.length?"Belum ada laptop di wishlist. Tap ikon hati di pojok kartu laptop untuk menyimpannya.":"Tidak ada laptop yang cocok. Coba ubah filter atau kata pencarian.";
+}
+const tabs=$("tabs");
+function setTier(k){tier=k;[...tabs.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.k==k));draw()}
+[["all","Semua"],...Object.entries(T).map(([k,v])=>[k,v[0]]),["wl","Wishlist"]].forEach(([k,l])=>{
+const b=document.createElement("button");b.dataset.k=k;b.textContent=l;b.setAttribute("aria-pressed",k=="all");b.onclick=()=>setTier(k);tabs.appendChild(b)});
+const updWl=()=>{tabs.lastChild.textContent=`Wishlist (${wl.length})`};
+function updCm(){
+document.querySelectorAll(".cmp").forEach(b=>{const on=cm.includes(b.dataset.id);b.setAttribute("aria-pressed",on);b.textContent=on?"✓ Dipilih":"⚖ Bandingkan"});
+$("chips").innerHTML=cm.map(id=>`<span class="chip">${D.find(d=>d[1]==id)[2]}<button data-rm="${id}" aria-label="Hapus dari perbandingan">×</button></span>`).join("");
+document.body.classList.toggle("ht",cm.length>0);$("cgo").disabled=cm.length<2;$("cgo").textContent=`Bandingkan (${cm.length})`}
+let tt;const toast=m=>{const t=$("toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),2200)};
+function cmpOpen(){
+const a=cm.map(id=>D.find(d=>d[1]==id)),S=n=>`<span style="color:#d98a00">${st(n)}</span>`;
+const rows=[["Harga",d=>`<b>${pf(d[8])} jt</b>`],["Kategori",d=>`<span class="v r${d[11]}"><span class="rk">${d[11]}</span>${R[d[11]-1]}</span>`],["CPU",d=>d[3]],["GPU",d=>d[4]],["RAM",d=>d[5]+ic(d[17],"RAM")],["Storage",d=>d[6]+ic(d[18],"SSD")],["Baterai",d=>`${jamT(d[7])} (${bq(d[7])[1]})`],["Bobot",d=>d[16]?`${bobT(d[16])} (${wq(d[16])[1]})`:"Belum ada data"],["Rating kuliah/kerja",d=>S(d[9])],["Rating gaming",d=>S(d[10])],["Kelebihan",d=>`<ul class="p">${li(d[12])}</ul>`],["Kekurangan",d=>`<ul class="k">${li(d[13])}</ul>`]];
+$("cb").innerHTML=`<table class="ct"><thead><tr><th></th>${a.map(d=>`<th scope="col"><div class="ph sm"><img src="images/${d[1]}.jpg" data-id="${d[1]}" alt="" onerror="fb(this)"></div>${d[2]}</th>`).join("")}</tr></thead><tbody>${rows.map(([l,f])=>`<tr><th scope="row">${l}</th>${a.map(d=>`<td>${f(d)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+$("dc").showModal()}
+$("g").onclick=e=>{const b=e.target.closest("[data-a]");if(!b)return;const id=b.dataset.id;
+if(b.dataset.a=="wl"){wl=wl.includes(id)?wl.filter(x=>x!=id):[...wl,id];lss(wl);updWl();
+if(tier=="wl")draw();else{const on=wl.includes(id);b.setAttribute("aria-pressed",on);b.textContent=on?"♥":"♡"}}
+else{if(cm.includes(id))cm=cm.filter(x=>x!=id);else if(cm.length>=3){toast("Maksimal 3 laptop untuk dibandingkan");return}else cm=[...cm,id];updCm()}};
+document.addEventListener("click",e=>{
+const c=e.target.closest("[data-close]");if(c)c.closest("dialog").close();
+if(e.target.tagName=="DIALOG")e.target.close();
+const b=e.target.closest(".cp");if(b)navigator.clipboard.writeText(b.previousElementSibling.textContent).then(()=>{b.textContent="Tersalin"});
+const r=e.target.closest("[data-rm]");if(r){cm=cm.filter(x=>x!=r.dataset.rm);updCm()}});
+$("cgo").onclick=cmpOpen;$("cclr").onclick=()=>{cm=[];updCm()};
+$("fab").onclick=()=>$("dd").showModal();
+$("q").oninput=e=>{q=e.target.value.toLowerCase().trim();draw()};
+$("so").onchange=e=>{so=e.target.value;draw()};
+$("rc").onchange=e=>{rec=e.target.checked;draw()};
+function goTo(){const id=decodeURIComponent(location.hash.slice(1));if(!D.some(d=>d[1]==id))return;rec=false;q="";$("q").value="";$("rc").checked=false;setTier("all");const el=$(id);if(el){el.scrollIntoView({block:"center"});el.classList.add("hl")}}
+addEventListener("hashchange",goTo);
+updWl();updCm();draw();goTo();
+</script>
+</body>
+</html>
