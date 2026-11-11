@@ -52,7 +52,7 @@
     #netlify-identity-widget, #netlify-toolbar, a[href*="netlify.com"] { display: none !important; }
   </style>
 </head>
-<body class="bg-bg font-sans text-soft antialiased selection:bg-accent selection:text-white">
+<body class="bg-bg font-sans text-soft antialiased selection:bg-accent selection:text-white overflow-x-hidden">
 
   <!-- Ambient background -->
   <div class="pointer-events-none absolute inset-x-0 top-0 h-[520px] overflow-hidden">
@@ -410,7 +410,7 @@
   </div>
 
   <script>
-    // 22 Database Laptop Lengkap (Original dari Data Sebelumnya)
+    // 22 Database Laptop Lengkap
     const RAW_DATA = [
       ["A","a1","Dell 14 Plus 2in1","Intel Ultra 256V","Intel Arc Graphics","16GB DDR5","1TB SSD",[14,18],14.3,5,3,1,"2-in-1 layar sentuh 360° + stylus|Lunar Lake efisien, NPU 47 TOPS|Cyberpunk 45–60 FPS (low/med + XeSS)|Aluminium kokoh, port lengkap (TB4, HDMI 2.1)","RAM soldered, tidak bisa upgrade|Berat ~1,55–1,6 kg|Layar IPS 60Hz, bukan OLED","1685452569.50962780226 1811457459.56913429232 1830180343.49012755089","https://www.laptopmag.com/laptops/windows-laptops/dell-14-plus-2-in-1-intel-review",1.6,"l",""],
       ["A","a2","ASUS Expertbook P3 G1 P3406CCAP","Intel Ultra 7 255H","Intel Arc Graphics","8GB DDR5","512GB SSD",[15,20],14.8,5,3,4,"Core Ultra 7 255H kencang & efisien|MIL-STD-810H, keyboard tahan cipratan|Port super lengkap termasuk LAN RJ45|Bisa upgrade: 2 slot RAM & 2 slot SSD","RAM cuma 8GB, upgrade ±Rp1,5jt|Cyberpunk 35–50 FPS hanya setelah RAM 16GB dual-channel|Layar standar bisnis (45% NTSC), desain membosankan","1530871035.44865059384","https://youtu.be/ho0x96_uM3U https://youtube.com/shorts/REEDHBdA6Tk https://www.youtube.com/watch?v=Uj08il8GMLw",1.43,"u","u"],
@@ -579,7 +579,7 @@
       const shopeeTokens = l.shopee.trim().split(' ').filter(Boolean);
       const shopeeHtml = shopeeTokens.map((tok, idx) => {
         const link = `https://shopee.co.id/product/${tok.replace('.', '/')}`;
-        return `<a href="${link}" target="_blank" rel="noopener" class="flex h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-accent text-[13px] font-semibold text-white shadow-[0_8px_20px_-8px_rgba(79,117,255,0.9)] transition hover:bg-[#6384FF] active:scale-[0.97]"><i class="fa-solid fa-bag-shopping text-[12px]"></i>Shopee ${shopeeTokens.length > 1 ? idx + 1 : ''}</a>`;
+        return `<a href="${link}" target="_blank" rel="noopener" class="flex h-11 flex-1 min-w-[90px] items-center justify-center gap-1.5 rounded-xl bg-accent px-2 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-[0_8px_20px_-8px_rgba(79,117,255,0.9)] transition hover:bg-[#6384FF] active:scale-[0.97]"><i class="fa-solid fa-bag-shopping text-[12px]"></i>Shopee ${shopeeTokens.length > 1 ? idx + 1 : ''}</a>`;
       }).join('');
 
       // Review Link
@@ -662,7 +662,7 @@
         </details>
 
         <div class="mt-auto pt-4">
-          <div class="flex gap-2">
+          <div class="flex flex-wrap gap-2">
             ${shopeeHtml}
             ${revHtml}
             <a href="https://wa.me/?text=${wa}" target="_blank" rel="noopener" aria-label="Share ke WhatsApp" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-line text-[#25D366] transition hover:border-[#25D366]/40 hover:bg-[#25D366]/10 active:scale-95"><i class="fa-brands fa-whatsapp text-lg"></i></a>
